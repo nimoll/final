@@ -19,7 +19,7 @@ public class HomeController {
 	@RequestMapping("studymain.do")
 	public String right_sidebar() {
 		
-		return "studyMain";
+		return "study/studyMain";
 	}
 	@RequestMapping("userstudy.do")
 	public String two_sidebar() {

@@ -27,7 +27,7 @@
 			<!-- Header -->
 				<div id="header">
 
-					<c:import url="header.jsp" />
+					<c:import url="common/header.jsp" />
 				
 
 					<!-- Nav -->
@@ -120,6 +120,6 @@
 					</div>
 				</section>
 		</div>
-		<c:import url="footer.jsp" />
+		<c:import url="common/footer.jsp" />
 	</body>
 </html>
