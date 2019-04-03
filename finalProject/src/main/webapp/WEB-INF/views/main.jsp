@@ -27,14 +27,14 @@
 			
 			
 			.slide{
-				width: 1400px;
+				width: 1680px;
 				overflow: hidden;
 				margin: 0 auto;
 				position: relative;
 			}
 			
 			.slide ul{
-				width: 4200px;
+				width: 5040px;
 				list-style: none;
 				font-size: 0;
 			}
@@ -54,6 +54,7 @@
 				right: 0;
 				top: 230px;
 			}
+			
 		</style>
 		<!-- Scripts -->
 			<script src="resources/assets/js/jquery.min.js"></script>
@@ -69,7 +70,7 @@
 					var current = 0;
 					var max = 0;
 					var container;
-					
+					var interval;
 					
 					
 					function init(){
@@ -77,33 +78,47 @@
 						max = container.children().length;
 						
 						events();
+						setInterval(next, 4000);
 					}
 					
 					function events(){
 						$("button.prev").on("click", prev);
 						$("button.next").on("click", next);
-						$("window").on("keydown",keydown);
+						$(window).on("keydown",keydown);
 					}
 					
 					function prev( e ){
+						//페이지 전환 버튼 첫번째 이미지에서 왼쪽 클릭시 마지막 이미지로 전환
 						current--;
 						if( current < 0) current = max-1;
 						animate();
 					}
 					
 					function next( e ){
+						//페이지 전환 버튼 마지막 이미지에서 오른쪽 클릭시 첫번째 이미지로 전환
 						current++;
 						if( current > max-1 ) current = 0;
 						animate();
 					}
 					
 					function animate(){
-						var moveX = current * 1400;
+						var moveX = current * 1680;
 						TweenMax.to( container, 0.8, {marginLeft:-moveX, ease:Expo.easeOut} );
+						
+						clearInterval( interval );
+						
+						
 					}
 					
 					function keydown( e ){
-						
+						//키보드로 이미지 전환 함수
+						//오른쪽 방향키 keycode가 39
+						if(e.which == 39)/* right */ {
+							next();
+						//왼쪽 방향키 keycode가 37
+						}else if(e.which == 37) /* left */{
+							prev();
+						}
 					}
 					
 					$(document).ready( init );

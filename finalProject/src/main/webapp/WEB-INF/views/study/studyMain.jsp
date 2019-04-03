@@ -40,8 +40,8 @@
 							<ul>
 								<li><a href="main.do">Home</a></li>
 								<li><a href="introduce.do">소개</a></li>
-								<li><a href="studymain.do">스터디</a></li>
-								<li class="current"><a href="userstudy.do">개인공부 관리</a></li>
+								<li class="current"><a href="studymain.do">스터디</a></li>
+								<li><a href="userstudy.do">개인공부 관리</a></li>
 								<li><a href="notice.do">공지사항</a></li>
 							</ul>
 						</nav>
