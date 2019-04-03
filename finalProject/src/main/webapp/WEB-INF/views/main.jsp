@@ -13,6 +13,48 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="resources/assets/css/main.css" />
+		<style type="text/css">
+			img{
+				display: block;
+				border: 0;
+			}
+			#prev,#next{
+				margin: 0;
+				padding: 0;
+				border: 0;
+				background: none;
+			}
+			
+			
+			.slide{
+				width: 1400px;
+				overflow: hidden;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			.slide ul{
+				width: 4200px;
+				list-style: none;
+				font-size: 0;
+			}
+			
+			.slide ul li{
+				display: inline-block;
+			}
+			
+			.slide button.prev{
+				position: absolute;
+				left: 0;
+				top: 230px;
+			}
+			
+			.slide button.next{
+				position: absolute;
+				right: 0;
+				top: 230px;
+			}
+		</style>
 		<!-- Scripts -->
 			<script src="resources/assets/js/jquery.min.js"></script>
 			<script src="resources/assets/js/jquery.dropotron.min.js"></script>
@@ -20,6 +62,53 @@
 			<script src="resources/assets/js/breakpoints.min.js"></script>
 			<script src="resources/assets/js/util.js"></script>
 			<script src="resources/assets/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+			<script type="text/javascript">
+				(function(){
+					
+					var current = 0;
+					var max = 0;
+					var container;
+					
+					
+					
+					function init(){
+						container = $(".slide ul");
+						max = container.children().length;
+						
+						events();
+					}
+					
+					function events(){
+						$("button.prev").on("click", prev);
+						$("button.next").on("click", next);
+						$("window").on("keydown",keydown);
+					}
+					
+					function prev( e ){
+						current--;
+						if( current < 0) current = max-1;
+						animate();
+					}
+					
+					function next( e ){
+						current++;
+						if( current > max-1 ) current = 0;
+						animate();
+					}
+					
+					function animate(){
+						var moveX = current * 1400;
+						TweenMax.to( container, 0.8, {marginLeft:-moveX, ease:Expo.easeOut} );
+					}
+					
+					function keydown( e ){
+						
+					}
+					
+					$(document).ready( init );
+				})();
+			</script>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -38,7 +127,23 @@
 						<li><a href="notice.do">공지사항</a></li>
 					</ul>
 				</nav>
-		</div>			
+		</div>
+		<br>			
+		<div class="slide">
+			<!-- 버튼 타입은 default가 submit이므로 button으로 지정 -->
+			<button class="prev" type="button" style="min-width: 30px; min-height: 30px;"><img alt="" src="resources/images/ghktkf1.png" /></button>
+			<ul>
+				<li><img class="img" alt="" src="resources/images/ban1.jpeg" /></li>
+				<li><img class="img" alt="" src="resources/images/ban2.jpg" /></li>
+				<li><img class="img" alt="" src="resources/images/ban3.jpg" /></li>
+			</ul>
+			<button class="next" type="button" style="min-width: 30px; min-height: 30px;"><img alt="" src="resources/images/ghktkf2.png" /></button>
+		</div>
+		
+		
+		
+		
+		
 			<!-- Banner -->
 				<section id="banner">
 					<header>

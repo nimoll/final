@@ -3,123 +3,153 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <!--
-	Arcana by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+   Arcana by HTML5 UP
+   html5up.net | @ajlkn
+   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>final</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="resources/assets/css/main.css" />
-		<!-- Scripts -->
-			<script src="resources/assets/js/jquery.min.js"></script>
-			<script src="resources/assets/js/jquery.dropotron.min.js"></script>
-			<script src="resources/assets/js/browser.min.js"></script>
-			<script src="resources/assets/js/breakpoints.min.js"></script>
-			<script src="resources/assets/js/util.js"></script>
-			<script src="resources/assets/js/main.js"></script>
-	</head>
-	<body class="is-preload">
-		<div id="page-wrapper">
+   <head>
+      <title>final</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link rel="stylesheet" href="resources/assets/css/main.css" />
+      <!-- Scripts -->
+         <script src="resources/assets/js/jquery.min.js"></script>
+         <script src="resources/assets/js/jquery.dropotron.min.js"></script>
+         <script src="resources/assets/js/browser.min.js"></script>
+         <script src="resources/assets/js/breakpoints.min.js"></script>
+         <script src="resources/assets/js/util.js"></script>
+         <script src="resources/assets/js/main.js"></script>
+         <style>
+            .row > .col-4 {
+                  width: 20%;
+               }
+            *{
+               list-style: none;   
+            }
+         </style>
+         
+   </head>
+   <body class="is-preload">
+      <div id="page-wrapper">
 
-			<!-- Header -->
-				<div id="header">
+         <!-- Header -->
+            <div id="header">
 
-					<c:import url="common/header.jsp" />
-				
+               <c:import url="common/header.jsp" />
+               <!-- Nav -->
+                  <nav id="nav">
+                     <ul>
+                        <li><a href="main.do">Home</a></li>
+                        <li class="current"><a href="introduce.do">소개</a></li>
+                        <li><a href="studymain.do">스터디</a></li>
+                        <li><a href="userstudy.do">개인공부 관리</a></li>
+                        <li><a href="notice.do">공지사항</a></li>
+                     </ul>
+                  </nav>
+            </div>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="main.do">Home</a></li>
-								<li class="current"><a href="introduce.do">소개</a></li>
-								<li><a href="studymain.do">스터디</a></li>
-								<li><a href="userstudy.do">개인공부 관리</a></li>
-								<li><a href="notice.do">공지사항</a></li>
-							</ul>
-						</nav>
-				</div>
+         <!-- Main -->
+            <section class="wrapper style1">
+               <div class="container">
+                  <div id="content">
 
-			<!-- Main -->
-				<section class="wrapper style1">
-					<div class="container">
-						<div class="row gtr-200">
-							<div class="col-4 col-12-narrower">
-								<div id="sidebar">
+                     <!-- Content -->
 
-									<!-- Sidebar -->
+                        <article>
+                           <header>
+                              <h2 style = "text-align:center;">ABOUT US</h2>
+                              <p></p>
+                           </header>
 
-										<section>
-											<h3>Just a Subheading</h3>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis et nisi etiam.</p>
-											<footer>
-												<a href="#" class="button">Continue Reading</a>
-											</footer>
-										</section>
-
-										<section>
-											<h3>Another Subheading</h3>
-											<ul class="links">
-												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-												<li><a href="#">Ornare in hendrerit in lectus</a></li>
-												<li><a href="#">Semper mod quis eget mi dolore</a></li>
-												<li><a href="#">Consequat etiam lorem phasellus</a></li>
-												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-												<li><a href="#">Semper mod quisturpis nisi</a></li>
-											</ul>
-											<footer>
-												<a href="#" class="button">More Random Links</a>
-											</footer>
-										</section>
-
-								</div>
-							</div>
-							<div class="col-8  col-12-narrower imp-narrower">
-								<div id="content">
-
-									<!-- Content -->
-
-										<article>
-											<header>
-												<h2>Left Sidebar</h2>
-												<p>Sidebar on the left, content on the right.</p>
-											</header>
-
-											<span class="image featured"><img src="resources/images/banner.jpg" alt="" /></span>
-
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam lorem ipsum dolor sit amet nullam.</p>
-
-											<h3>And Yet Another Subheading</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
-											justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
-											ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
-											vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-											Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-											rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
-											Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
-											Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum commodo luctus.</p>
-
-											<p>Phasellus odio risus, faucibus et viverra vitae, eleifend ac purus. Praesent mattis, enim
-											quis hendrerit porttitor, sapien tortor viverra magna, sit amet rhoncus nisl lacus nec arcu.
-											Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt. Mauris dolor urna,
-											fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium.
-											Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
-											Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.</p>
-										</article>
-
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-		</div>
-		<c:import url="common/footer.jsp" />
-	</body>
+                           <span class="image featured"><img src="resources/images/intro/in2.png" alt="" /></span>
+                           <div class="container">
+                              <h3>팀원 소개</h3><br>
+                              <div class = "row gtr-200">
+                                 <section class="col-4 col-12-narrower">
+                                    <div class = "box highlight">
+                                       <img src="resources/images/intro/people.png" style = "border-radius: 50%; width : 128px; height:128px;">
+                                       <p>엄마담당<br/>(감독)</p>
+                                    </div>
+                                 </section>
+                                 <section class="col-4 col-12-narrower">
+                                    <div class = "box highlight">
+                                       <img src="resources/images/intro/people.png" style = "border-radius: 50%; width : 128px; height:128px;">
+                                       <p>아빠담당</p>
+                                    </div>
+                                 </section>
+                                 <section class="col-4 col-12-narrower">
+                                    <div class = "box highlight">
+                                       <img src="resources/images/intro/people.png" style = "border-radius: 50%; width : 128px; height:128px;">
+                                       <p>잡소리담당</p>
+                                    </div>
+                                 </section>
+                                 <section class="col-4 col-12-narrower">
+                                    <div class = "box highlight">
+                                       <img src="resources/images/intro/people.png" style = "border-radius: 50%; width : 128px; height:128px;">
+                                       <p>뒷바라지담당</p>
+                                    </div>
+                                 </section>
+                                    <section class="col-4 col-12-narrower">
+                                       <div class = "box highlight">
+                                       <img src="resources/images/intro/people.png" style = "border-radius: 50%; width : 128px; height:128px;">   
+                                       <p>스캔담당</p>
+                                    </div>
+                                 </section>
+                              </div>
+                           </div>
+                        </article>
+                        
+                        <!-- Posts -->
+            <section class="wrapper style1">
+               <div class="container">
+                  <div class="row">
+                     <section class="col-6 col-12-narrower">
+                        <div class="box post">
+                           <a href="#" class="image left"><img src="resources/images/pic01.jpg" alt="" /></a>
+                           <div class="inner">
+                              <h3>스터디</h3>
+                              <p style = "font-size : 20px;">지금 이 글을 일고 계신 바로 당신도 그룹<br/>운영에 참여 가능합니다. 그룹을 맡아서 운영해보고 싶으신 분들은 "모임 신청"에서 신청해주세요</p>
+                           </div>
+                        </div>
+                     </section>
+                     <section class="col-6 col-12-narrower">
+                        <div class="box post">
+                           <a href="#" class="image left"><img src="resources/images/pic02.jpg" alt="" /></a>
+                           <div class="inner">
+                              <h3>The Second Thing</h3>
+                              <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                           </div>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="row">
+                     <section class="col-6 col-12-narrower">
+                        <div class="box post">
+                           <a href="#" class="image left"><img src="resources/images/pic03.jpg" alt="" /></a>
+                           <div class="inner">
+                              <h3>The Third Thing</h3>
+                              <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                           </div>
+                        </div>
+                     </section>
+                     <section class="col-6 col-12-narrower">
+                        <div class="box post">
+                           <a href="#" class="image left"><img src="resources/images/pic04.jpg" alt="" /></a>
+                           <div class="inner">
+                              <h3>The Fourth Thing</h3>
+                              <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                           </div>
+                        </div>
+                     </section>
+                  </div>
+               </div>
+            </section>
+                  </div>
+               </div>
+            </section>
+      </div>
+   
+      <c:import url="common/footer.jsp" />
+   </body>
 </html>
