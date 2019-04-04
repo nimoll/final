@@ -27,14 +27,14 @@
 			
 			
 			.slide{
-				width: 1680px;
+				width: 1500px;
 				overflow: hidden;
 				margin: 0 auto;
 				position: relative;
 			}
 			
 			.slide ul{
-				width: 5040px;
+				width: 4500px;
 				list-style: none;
 				font-size: 0;
 			}
@@ -102,7 +102,7 @@
 					}
 					
 					function animate(){
-						var moveX = current * 1680;
+						var moveX = current * 1500;
 						TweenMax.to( container, 0.8, {marginLeft:-moveX, ease:Expo.easeOut} );
 						
 						clearInterval( interval );
