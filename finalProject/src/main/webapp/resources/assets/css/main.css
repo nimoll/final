@@ -2597,7 +2597,7 @@ input, select, textarea {
 
 	#header {
 		text-align: center;
-		padding: 3em 0 0 0;
+		padding: 0.5em 0 0 0;
 		background-color: #fff;
 		background-image: url("images/bg02.png"), url("images/bg02.png"), url("images/bg01.png");
 		background-position: top left,					top left,					top left;
@@ -2651,6 +2651,7 @@ input, select, textarea {
 					border: 0;
 					display: block;
 					padding: 1.5em 0.5em 1.35em 0.5em;
+					font-size: 120% !important;
 				}
 
 				#nav > ul > li:first-child {
@@ -2872,7 +2873,7 @@ input, select, textarea {
 
 		#footer .copyright {
 			color: #999;
-			margin-top: 1.5em;
+			margin-top: 2.2em;
 			text-align: center;
 			font-size: 0.9em;
 		}
