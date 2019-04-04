@@ -27,14 +27,14 @@
 			
 			
 			.slide{
-				width: 1500px;
+				max-width: 1680px;
 				overflow: hidden;
 				margin: 0 auto;
 				position: relative;
 			}
 			
 			.slide ul{
-				width: 4500px;
+				width: 5040px;
 				list-style: none;
 				font-size: 0;
 			}
@@ -102,7 +102,7 @@
 					}
 					
 					function animate(){
-						var moveX = current * 1500;
+						var moveX = current * 1680;
 						TweenMax.to( container, 0.8, {marginLeft:-moveX, ease:Expo.easeOut} );
 						
 						clearInterval( interval );
@@ -142,8 +142,7 @@
 						<li><a href="notice.do">공지사항</a></li>
 					</ul>
 				</nav>
-		</div>
-		<br>			
+		</div>			
 		<div class="slide">
 			<!-- 버튼 타입은 default가 submit이므로 button으로 지정 -->
 			<button class="prev" type="button" style="min-width: 30px; min-height: 30px;"><img alt="" src="resources/images/ghktkf1.png" /></button>
