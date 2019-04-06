@@ -13,49 +13,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="resources/assets/css/main.css" />
-		<style type="text/css">
-			img{
-				display: block;
-				border: 0;
-			}
-			#prev,#next{
-				margin: 0;
-				padding: 0;
-				border: 0;
-				background: none;
-			}
-			
-			
-			.slide{
-				max-width: 1680px;
-				overflow: hidden;
-				margin: 0 auto;
-				position: relative;
-			}
-			
-			.slide ul{
-				width: 5040px;
-				list-style: none;
-				font-size: 0;
-			}
-			
-			.slide ul li{
-				display: inline-block;
-			}
-			
-			.slide button.prev{
-				position: absolute;
-				left: 0;
-				top: 230px;
-			}
-			
-			.slide button.next{
-				position: absolute;
-				right: 0;
-				top: 230px;
-			}
-			
-		</style>
 		<!-- Scripts -->
 			<script src="resources/assets/js/jquery.min.js"></script>
 			<script src="resources/assets/js/jquery.dropotron.min.js"></script>
@@ -63,67 +20,6 @@
 			<script src="resources/assets/js/breakpoints.min.js"></script>
 			<script src="resources/assets/js/util.js"></script>
 			<script src="resources/assets/js/main.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-			<script type="text/javascript">
-				(function(){
-					
-					var current = 0;
-					var max = 0;
-					var container;
-					var interval;
-					
-					
-					function init(){
-						container = $(".slide ul");
-						max = container.children().length;
-						
-						events();
-						setInterval(next, 4000);
-					}
-					
-					function events(){
-						$("button.prev").on("click", prev);
-						$("button.next").on("click", next);
-						$(window).on("keydown",keydown);
-					}
-					
-					function prev( e ){
-						//페이지 전환 버튼 첫번째 이미지에서 왼쪽 클릭시 마지막 이미지로 전환
-						current--;
-						if( current < 0) current = max-1;
-						animate();
-					}
-					
-					function next( e ){
-						//페이지 전환 버튼 마지막 이미지에서 오른쪽 클릭시 첫번째 이미지로 전환
-						current++;
-						if( current > max-1 ) current = 0;
-						animate();
-					}
-					
-					function animate(){
-						var moveX = current * 1680;
-						TweenMax.to( container, 0.8, {marginLeft:-moveX, ease:Expo.easeOut} );
-						
-						clearInterval( interval );
-						
-						
-					}
-					
-					function keydown( e ){
-						//키보드로 이미지 전환 함수
-						//오른쪽 방향키 keycode가 39
-						if(e.which == 39)/* right */ {
-							next();
-						//왼쪽 방향키 keycode가 37
-						}else if(e.which == 37) /* left */{
-							prev();
-						}
-					}
-					
-					$(document).ready( init );
-				})();
-			</script>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -143,21 +39,6 @@
 					</ul>
 				</nav>
 		</div>			
-		<div class="slide">
-			<!-- 버튼 타입은 default가 submit이므로 button으로 지정 -->
-			<button class="prev" type="button" style="min-width: 30px; min-height: 30px;"><img alt="" src="resources/images/ghktkf1.png" /></button>
-			<ul>
-				<li><img class="img" alt="" src="resources/images/ban1.jpeg" /></li>
-				<li><img class="img" alt="" src="resources/images/ban2.jpg" /></li>
-				<li><img class="img" alt="" src="resources/images/ban3.jpg" /></li>
-			</ul>
-			<button class="next" type="button" style="min-width: 30px; min-height: 30px;"><img alt="" src="resources/images/ghktkf2.png" /></button>
-		</div>
-		
-		
-		
-		
-		
 			<!-- Banner -->
 				<section id="banner">
 					<header>

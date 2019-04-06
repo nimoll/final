@@ -11,7 +11,7 @@
 		<div id="footer">
 			<!-- Copyright -->
 			<div class="copyright">
-				<ul class="menu">
+				<ul class="menu" style="margin-left: 20px;">
 					<li style="text-align: left; padding-right: 60px; padding-top: 10px;">
 						<h3>사이트 이용문의</h3>
 						상담시간 : <b>09:00 ~ 18:00</b><br>
