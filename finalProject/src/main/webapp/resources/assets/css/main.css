@@ -1,5 +1,8 @@
+@import url("nanum.css");
+@import url("nanumbarun.css");
 @import url("font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
+
 
 /*
 	Arcana by HTML5 UP
@@ -101,7 +104,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #474747;
-		font-family: FontAwesome;
+		font-family: 'NanumBarunGothic','NanumGothic', FontAwesome, sans-serif;
 		font-size: 13pt;
 		font-weight: 400;
 		line-height: 1.65;
@@ -137,7 +140,7 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		color: inherit;
-		font-family: FontAwesome;
+		font-family: 'NanumBarunGothic','NanumGothic', FontAwesome, sans-serif;
 		font-weight: 600;
 		line-height: 1.75em;
 		margin-bottom: 1em;
@@ -2007,7 +2010,7 @@ input, select, textarea {
 
 	header p {
 		color: #999;
-		font-family: FontAwesome;
+		font-family: 'NanumBarunGothic','NanumGothic', FontAwesome, sans-serif;
 		font-size: 1em;
 		position: relative;
 		margin-top: -1.25em;
@@ -2046,86 +2049,282 @@ input, select, textarea {
 		}
 
 /* Form */
+   /* 여기서부터다아~~~~~~~~~~~~~~ */
+   input[type="checkbox"] + label, input[type="radio"] + label {
+    text-decoration: none;
+    color: #7f888f;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 400;
+    padding-left: 2.4em;
+    padding-right: 0.75em;
+    position: relative;
+}
+label {
+      color: #3d4449;
+      /* display: block; */
+      /* font-size: 0.9em; */
+      /* font-weight: 600; */
+      margin: 0 0 1em 0;
+   }
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	input[type="tel"],
-	input[type="search"],
-	input[type="url"],
-	input[type="number"],
-	input[type="date"],
-	select,
-	textarea {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-		-moz-transition: border-color 0.2s ease-in-out;
-		-webkit-transition: border-color 0.2s ease-in-out;
-		-ms-transition: border-color 0.2s ease-in-out;
-		transition: border-color 0.2s ease-in-out;
-		background: #fff;
-		border: solid 1px #e0e0e0;
-		border-radius: 5px;
-		color: inherit;
-		display: block;
-		outline: 0;
-		padding: 0.75em;
-		text-decoration: none;
-		width: 100%;
-	}
+   /* input[type="text"],
+   input[type="password"],
+   input[type="email"],
+   input[type="tel"],
+   input[type="search"],
+   input[type="url"], */
+   select,
+   /* textarea {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+      background: #ffffff;
+      border-radius: 0.375em;
+      border: none;
+      border: solid 1px rgba(210, 215, 217, 0.75);
+      color: inherit;
+      display: block;
+      outline: 0;
+      padding: 0 1em;
+      text-decoration: none;
+      width: 100%;
+   } */
 
-		input[type="text"]:focus,
-		input[type="password"]:focus,
-		input[type="email"]:focus,
-		input[type="tel"]:focus,
-		input[type="search"]:focus,
-		input[type="url"]:focus,
-		input[type="number"]:focus,
-		input[type="date"]:focus,
-		select:focus,
-		textarea:focus {
-			border-color: #37c0fb;
-		}
+      /* input[type="text"]:invalid,
+      input[type="password"]:invalid,
+      input[type="email"]:invalid,
+      input[type="tel"]:invalid,
+      input[type="search"]:invalid,
+      input[type="url"]:invalid, */
+      select:invalid,
+      /* textarea:invalid {
+         box-shadow: none;
+      } */
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	input[type="tel"],
-	input[type="search"],
-	input[type="url"],
-	input[type="number"],
-	input[type="date"]
-	 {
-		line-height: 1em;
-	}
+      /* input[type="text"]:focus,
+      input[type="password"]:focus,
+      input[type="email"]:focus,
+      input[type="tel"]:focus,
+      input[type="search"]:focus,
+      input[type="url"]:focus, */
+      select:focus
+   /*    textarea:focus {
+         border-color: #f56a6a;
+         box-shadow: 0 0 0 1px #f56a6a;
+      } */
 
-	label {
-		display: block;
-		color: inherit;
-		font-weight: 600;
-		line-height: 1.75em;
-		margin-bottom: 0.5em;
-	}
+   select {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='rgba(210, 215, 217, 0.75)' /%3E%3C/svg%3E");
+      background-size: 1.25em;
+      background-repeat: no-repeat;
+      background-position: calc(100% - 1em) center;
+      height: 2.75em;
+      padding-right: 2.75em;
+      text-overflow: ellipsis;
+   }
 
-	::-webkit-input-placeholder {
-		color: #999;
-		position: relative;
-		top: 3px;
-	}
+      select option {
+         color: #3d4449;
+         background: #ffffff;
+      }
 
-	:-moz-placeholder {
-		color: #999;
-	}
+      select:focus::-ms-value {
+         background-color: transparent;
+      }
 
-	::-moz-placeholder {
-		color: #999;
-	}
+      select::-ms-expand {
+         display: none;
+      }
 
-	:-ms-input-placeholder {
-		color: #999;
-	}
+   /* input[type="text"],
+   input[type="password"],
+   input[type="email"],
+   input[type="tel"],
+   input[type="search"],
+   input[type="url"], */
+   select {
+      height: 2.75em;
+   }
+
+/*    textarea {
+      padding: 0.75em 1em;
+   } */
+
+   input[type="checkbox"],
+   input[type="radio"] {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+      display: block;
+      float: left;
+      margin-right: -2em;
+      opacity: 0;
+      width: 1em;
+      z-index: -1;
+   }
+
+      input[type="checkbox"] + label,
+      input[type="radio"] + label {
+         text-decoration: none;
+         color: #7f888f;
+         cursor: pointer;
+         display: inline-block;
+         font-size: 1em;
+         font-weight: 400;
+         padding-left: 2.4em;
+         padding-right: 0.75em;
+         position: relative;
+      }
+
+         input[type="checkbox"] + label:before,
+         input[type="radio"] + label:before {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            font-family: 'NanumBarunGothic','NanumGothic', FontAwesome, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-transform: none !important;
+         }
+
+         input[type="checkbox"] + label:before,
+         input[type="radio"] + label:before {
+            background: #ffffff;
+            border-radius: 0.375em;
+            border: solid 1px rgba(210, 215, 217, 0.75);
+            content: '';
+            display: inline-block;
+            height: 1.65em;
+            left: 0;
+            line-height: 1.58125em;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            width: 1.65em;
+         }
+
+      input[type="checkbox"]:checked + label:before,
+      input[type="radio"]:checked + label:before {
+         background: #3d4449;
+         border-color: #3d4449;
+         color: #ffffff;
+         content: '\f00c';
+      }
+
+      input[type="checkbox"]:focus + label:before,
+      input[type="radio"]:focus + label:before {
+         border-color: #37c0fb;
+         box-shadow: 0 0 0 1px #37c0fb;
+      }
+
+   input[type="checkbox"] + label:before {
+      border-radius: 0.375em;
+   }
+
+   input[type="radio"] + label:before {
+      border-radius: 100%;
+   }
+/* 
+    ::-webkit-input-placeholder {
+      color: #9fa3a6 !important;
+      opacity: 1.0;
+   }
+
+   :-moz-placeholder {
+      color: #9fa3a6 !important;
+      opacity: 1.0;
+   }
+
+   ::-moz-placeholder {
+      color: #9fa3a6 !important;
+      opacity: 1.0;
+   }
+
+   :-ms-input-placeholder {
+      color: #9fa3a6 !important;
+      opacity: 1.0;
+   }  */
+   /* 여기까지다~~~~~ */
+   
+   input[type="text"],
+   input[type="password"],
+   input[type="email"],
+   input[type="tel"],
+   input[type="search"],
+   input[type="url"],
+   input[type="number"],
+   input[type="date"],
+   select,
+   textarea {
+      
+      -moz-transition: border-color 0.2s ease-in-out;
+      -webkit-transition: border-color 0.2s ease-in-out;
+      -ms-transition: border-color 0.2s ease-in-out;
+      transition: border-color 0.2s ease-in-out;
+      background: #fff;
+      border: solid 1px #e0e0e0;
+      border-radius: 5px;
+      color: inherit;
+      display: block;
+      outline: 0;
+      padding: 0.75em;
+      text-decoration: none;
+      width: 100%;
+   }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus,
+      input[type="email"]:focus,
+      input[type="tel"]:focus,
+      input[type="search"]:focus,
+      input[type="url"]:focus,
+      input[type="number"]:focus,
+      input[type="date"]:focus,
+      select:focus,
+      textarea:focus {
+         border-color: #37c0fb;
+      }
+
+   input[type="text"],
+   input[type="password"],
+   input[type="email"],
+   input[type="tel"],
+   input[type="search"],
+   input[type="url"],
+   input[type="number"],
+   input[type="date"]
+    {
+      line-height: 1em;
+   }
+
+   label {
+      display: block;
+      color: inherit;
+      font-weight: 600;
+      line-height: 1.75em;
+      margin-bottom: 0.5em;
+   }
+
+   ::-webkit-input-placeholder {
+      color: #999;
+      position: relative;
+      top: 3px;
+   }
+
+   :-moz-placeholder {
+      color: #999;
+   }
+
+   ::-moz-placeholder {
+      color: #999;
+   }
+
+   :-ms-input-placeholder {
+      color: #999;
+   } 
 
 /* Image */
 
@@ -2184,7 +2383,7 @@ input, select, textarea {
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+			font-family: 'NanumBarunGothic','NanumGothic', FontAwesome, sans-serif;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -3166,7 +3365,7 @@ input, select, textarea {
 					#titleBar .toggle:before {
 						-moz-osx-font-smoothing: grayscale;
 						-webkit-font-smoothing: antialiased;
-						font-family: FontAwesome;
+						font-family: 'NanumBarunGothic','NanumGothic', FontAwesome, sans-serif;
 						font-style: normal;
 						font-weight: normal;
 						text-transform: none !important;
